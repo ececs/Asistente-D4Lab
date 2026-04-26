@@ -6,14 +6,16 @@ load_dotenv(override=True)
 
 # Clientes de IA
 client_openai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+# Cliente Gemini (vía interfaz OpenAI para unificación)
 client_gemini = OpenAI(
     api_key=os.getenv("GOOGLE_API_KEY"),
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 )
 
-# Configuración de Modelos
-MODEL_CHAT = "gpt-4o-mini"
-MODEL_EVAL = "gemini-2.5-flash-lite"
+# Modelos
+MODEL_GEMINI = "gemini-1.5-flash"
+MODEL_GPT = "gpt-4o-mini"
 MODEL_EMBEDDING = "text-embedding-3-small"
 
 # Datos Personales

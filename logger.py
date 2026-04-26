@@ -5,13 +5,18 @@ import os
 LOG_FILE = "logs_interacciones.jsonl"
 
 def log_interaccion(pregunta, respuesta, evaluacion_final, intentos):
+    # Asegurar compatibilidad con el nuevo formato de diccionario de evaluación
+    calidad = evaluacion_final.get("calidad", 0)
+    comentario = evaluacion_final.get("comentario", "Sin comentarios")
+    
     log_entry = {
         "timestamp": datetime.now().isoformat(),
         "pregunta": pregunta,
         "respuesta": respuesta,
         "evaluacion_final": {
-            "aceptada": evaluacion_final.es_aceptable,
-            "retroalimentacion": evaluacion_final.retroalimentacion
+            "calidad": calidad,
+            "comentario": comentario,
+            "aceptada": calidad >= 7  # Consideramos aceptable si es 7 o más
         },
         "intentos": intentos
     }
@@ -27,9 +32,12 @@ def obtener_estadisticas():
     aceptadas = 0
     with open(LOG_FILE, "r", encoding="utf-8") as f:
         for line in f:
-            total += 1
-            data = json.loads(line)
-            if data["evaluacion_final"]["aceptada"]:
-                aceptadas += 1
+            try:
+                total += 1
+                data = json.loads(line)
+                if data["evaluacion_final"].get("aceptada", False):
+                    aceptadas += 1
+            except:
+                continue
     
     return f"Total: {total} | Aceptadas: {aceptadas} ({ (aceptadas/total)*100 if total > 0 else 0 }%)"

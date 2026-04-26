@@ -3,3 +3,8 @@ asistente_nuevo/
 __pycache__/
 *.pyc
 .DS_Store
+chroma_db/
+logs_interacciones.jsonl
+scratch/
+leads.db
+data/preguntas_sin_respuesta.json

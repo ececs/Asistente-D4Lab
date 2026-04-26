@@ -1,0 +1,31 @@
+# Información de Proyectos de Eudaldo Cal Saul
+
+## D4Lab (d4lab.es)
+Agencia de servicios tecnológicos y desarrollo de software integral. Partner tecnológico para hardware, infraestructura y desarrollo de software.
+Servicios:
+- Desarrollo Web y Apps (Full-stack: PHP, Python, Firebase, SQL).
+- Integración de IA (Chatbots, automatización con Gemini/OpenAI/Claude).
+- Infraestructura y Redes (Linux/Windows, VPNs, Seguridad).
+- Soporte Técnico (Remoto y presencial en Tenerife).
+- Domótica y automatización de espacios.
+Propuesta de valor: Conocimiento "bottom-to-top" con más de 20 años de experiencia, eliminando la dependencia de terceros.
+
+## TesIA (tesia.es)
+Plataforma EdTech para la preparación de oposiciones a la Administración General del Estado (AGE). Producto propio de D4Lab.
+Servicios:
+- Preparación TAI (C1): Tests por bloques, supuestos prácticos, +540 preguntas.
+- Preparación Auxiliar Administrativo (C2): Psicotécnicos, bloques administrativos, +680 preguntas.
+- Banco de Exámenes: Exámenes oficiales y simulacros (+1200 preguntas).
+Propuesta de valor: Especialización técnica profunda en cuerpos de informática y administración, combinando tecnología ágil con pedagogía práctica.
+
+## Automatizaciones en Servidor Local (n8n)
+Servidor en 192.168.31.199:5678.
+Flujos de trabajo activos detectados:
+- **📅 TesIA Social — B-AUX: Pregunta del Día (13h)**: Publicación diaria de preguntas de examen para la comunidad de TesIA.
+- **😱 TesIA Social — E-AUX/E-EXAM: Encuesta Engagement (Miércoles)**: Encuestas interactivas para fomentar la participación en redes sociales.
+- **📅 TesIA Social — G-EXAM: Efeméride de Convocatoria (Viernes 18h)**: Notificaciones sobre fechas importantes de oposiciones.
+- **🔥 TesIA Social — F-AUX: Reto de Racha (Jueves 13h)**: Gamificación para los estudiantes de TesIA.
+- **🧠 D4Lab Blog Motor v1**: Sistema de automatización para la generación y publicación de contenido en el blog de D4Lab.
+- **⚠️ TesIA Social — Error Handler Email**: Sistema de monitorización y alertas de errores en los flujos sociales.
+- **📚 Materiales por Tema - Drive Auto v2** (Inactivo): Automatización de gestión de archivos en Google Drive.
+Este servidor actúa como el "cerebro" de las operaciones de D4Lab, permitiendo prototipar e implementar soluciones de automatización rápidamente.
