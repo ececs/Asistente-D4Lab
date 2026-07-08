@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Eudaldo Cal Saul</title>
+    <title>Curriculum Eudaldo Cal Saul - Técnico de Operaciones ATO</title>
     <style>
         :root {
             --primary-dark: #0f172a;
@@ -26,12 +26,13 @@
             color: var(--text-main);
             line-height: 1.4;
             background: #f1f5f9;
-            padding: 20px;
+            padding: 10px;
         }
 
         .cv-container {
             width: 210mm;
-            min-height: 297mm;
+            height: 297mm;
+            max-height: 297mm;
             background: white;
             margin: 0 auto;
             display: flex;
@@ -41,9 +42,9 @@
 
         /* Sidebar */
         .sidebar {
-            width: 32%;
+            width: 28%;
             background: var(--bg-sidebar);
-            padding: 55px 20px 20px 20px;
+            padding: 55px 18px 15px 18px;
             border-right: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
@@ -61,16 +62,16 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             border-bottom: 2px solid var(--accent-blue);
-            padding-bottom: 4px;
+            padding-bottom: 3px;
             width: 100%;
         }
 
         .contact-list {
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 4px;
         }
 
         .contact-item {
@@ -95,7 +96,7 @@
 
         /* Stack Tecnico styling */
         .stack-group {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .stack-group-title {
@@ -104,7 +105,7 @@
             color: var(--text-light);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .tags-container {
@@ -128,7 +129,7 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
         }
 
         .differential-item {
@@ -152,7 +153,7 @@
         .lang-list {
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 4px;
         }
 
         .lang-item {
@@ -167,10 +168,11 @@
         /* Main Content */
         .main {
             flex: 1;
-            padding: 35px 35px 30px 35px;
+            padding: 24px 30px 18px 30px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 12px;
+            overflow: hidden;
         }
 
         header {
@@ -196,11 +198,11 @@
 
         .profile-summary {
             background: #f0f7ff;
-            padding: 14px 16px;
+            padding: 10px 14px;
             border-radius: 4px;
             border-left: 4px solid var(--accent-blue);
             font-size: 0.78rem;
-            line-height: 1.45;
+            line-height: 1.4;
             color: var(--text-main);
         }
 
@@ -209,22 +211,22 @@
             font-weight: 800;
             color: var(--primary-dark);
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             border-bottom: 2px solid var(--border-color);
-            padding-bottom: 4px;
+            padding-bottom: 3px;
             letter-spacing: 0.05em;
         }
 
         .job-education-block {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 10px;
         }
 
         .entry {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 2px;
         }
 
         .entry-header {
@@ -266,8 +268,8 @@
             padding-left: 16px;
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            margin-top: 2px;
+            gap: 2px;
+            margin-top: 1px;
         }
 
         .entry-list li {
@@ -328,68 +330,31 @@
                 </div>
             </div>
 
-            <!-- STACK TÉCNICO -->
+            <!-- COMPETENCIAS CLAVE -->
             <div class="sidebar-section">
-                <h3 class="sidebar-title">Stack Técnico</h3>
+                <h3 class="sidebar-title">Competencias</h3>
 
                 <div class="stack-group">
-                    <div class="stack-group-title">Lenguajes</div>
+                    <div class="stack-group-title">Operaciones e IT</div>
+                    <div class="tags-container">
+                        <span class="skill-tag">Planificación operativa</span>
+                        <span class="skill-tag">SOPs / Normativa</span>
+                        <span class="skill-tag">Gestión de Datos</span>
+                        <span class="skill-tag">Excel Avanzado</span>
+                        <span class="skill-tag">IT Service Mgt</span>
+                        <span class="skill-tag">Gestión incidencias</span>
+                        <span class="skill-tag">KPIs operativos</span>
+                        <span class="skill-tag">Coordinación recursos</span>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <div class="stack-group-title">Desarrollo e IA</div>
                     <div class="tags-container">
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="stack-group">
-                    <div class="stack-group-title">IA & ML</div>
-                    <div class="tags-container">
-                        <span class="skill-tag">LangGraph</span>
-                        <span class="skill-tag">RAG</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">pgvector</span>
-                        <span class="skill-tag">FAISS</span>
-                        <span class="skill-tag">Ollama</span>
-                    </div>
-                </div>
-
-                <div class="stack-group">
-                    <div class="stack-group-title">Backend & Datos</div>
-                    <div class="tags-container">
-                        <span class="skill-tag">FastAPI</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">Redis</span>
-                        <span class="skill-tag">WebSockets</span>
-                        <span class="skill-tag">Firebase</span>
-                    </div>
-                </div>
-
-                <div class="stack-group">
-                    <div class="stack-group-title">Frontend</div>
-                    <div class="tags-container">
-                        <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">React Native</span>
-                        <span class="skill-tag">Expo</span>
-                        <span class="skill-tag">Tailwind</span>
-                    </div>
-                </div>
-
-                <div class="stack-group">
-                    <div class="stack-group-title">Automatización & DevOps</div>
-                    <div class="tags-container">
-                        <span class="skill-tag">n8n</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Stripe</span>
-                        <span class="skill-tag">Vercel</span>
-                        <span class="skill-tag">Railway</span>
-                        <span class="skill-tag">Git / GitHub</span>
-                        <span class="skill-tag">Pytest</span>
-                        <span class="skill-tag">Playwright</span>
+                        <span class="skill-tag">BBDD / SQL</span>
+                        <span class="skill-tag">n8n / APIs</span>
+                        <span class="skill-tag">Sistemas / Redes</span>
                     </div>
                 </div>
             </div>
@@ -398,11 +363,10 @@
             <div class="sidebar-section">
                 <h3 class="sidebar-title">Diferencial</h3>
                 <ul class="differential-list">
-                    <li class="differential-item">17 años en sistemas industriales críticos (tolerancia cero al error)
-                    </li>
-                    <li class="differential-item">Nota media de Sobresaliente en DAW · Mención de Honor</li>
+                    <li class="differential-item">Alumno ATPL/CPL en curso (CANAVIA / BlueTeam)</li>
+                    <li class="differential-item">17 años en sistemas industriales críticos (tolerancia cero)</li>
+                    <li class="differential-item">Pensamiento estructurado y coordinación de recursos</li>
                     <li class="differential-item">186 ECTS en Ingeniería Informática (UNED)</li>
-                    <li class="differential-item">Formación ATPL/CPL en curso (disciplina operativa y CRM)</li>
                 </ul>
             </div>
 
@@ -411,7 +375,7 @@
                 <h3 class="sidebar-title">Idiomas</h3>
                 <div class="lang-list">
                     <div class="lang-item"><strong>Español:</strong> Nativo</div>
-                    <div class="lang-item"><strong>Inglés:</strong> B2 certificado</div>
+                    <div class="lang-item"><strong>Inglés:</strong> B2 certificado · documentación técnica</div>
                 </div>
             </div>
         </aside>
@@ -420,73 +384,57 @@
         <main class="main">
             <header>
                 <h1>Eudaldo Cal Saul</h1>
-                <div class="header-subtitle">DESARROLLADOR FULL-STACK · IA APLICADA Y AUTOMATIZACIÓN</div>
+                <div class="header-subtitle">ESPECIALISTA EN OPERACIONES, IT Y DATOS</div>
             </header>
 
             <div class="profile-summary">
-                Desarrollador full-stack especializado en <strong>IA aplicada, automatización y sistemas RAG</strong>,
-                con <strong>17 años de experiencia previa operando sistemas industriales críticos</strong>. Diseño y
-                pongo en producción soluciones completas: backend, frontend, flujos n8n, asistentes LLM y productos con
-                pagos, datos y despliegue cloud, combinando criterio técnico con disciplina operativa de "error cero".
+                Perfil híbrido con <strong>17 años de experiencia en operaciones críticas</strong>, administración de sistemas y análisis de datos, actualmente en formación <strong>ATPL/CPL</strong>. Aporto pensamiento estructurado, rigor operativo y capacidad para coordinar recursos, analizar KPIs, resolver incidencias y optimizar procesos en entornos exigentes. Empleo herramientas de análisis de datos y automatización de flujos de trabajo con el fin de maximizar la planificación de vuelos y la disponibilidad de recursos de una ATO, integrando la cultura de seguridad, CRM y procedimientos aeronáuticos.
             </div>
 
             <!-- EXPERIENCIA -->
             <section class="section">
                 <h2 class="section-title">Experiencia</h2>
                 <div class="job-education-block">
+                    <!-- D4Lab -->
                     <div class="entry">
                         <div class="entry-header">
-                            <span class="entry-title">Founder · Full-Stack & AI Automation Engineer</span>
+                            <span class="entry-title">Founder · Consultor IT y Analista de Datos</span>
                             <span class="entry-date">2024 - Actualidad</span>
                         </div>
-                        <div class="entry-sub"><a href="https://d4lab.es" target="_blank">D4Lab · Estudio de IA &
-                                Software</a></div>
+                        <div class="entry-sub"><a href="https://d4lab.es" target="_blank">D4Lab · Estudio de Software &
+                                Automatización</a></div>
                         <ul class="entry-list">
-                            <li><strong>Diseño soluciones de automatización e IA</strong> para operaciones, soporte y
-                                captación, con <strong>workflows n8n autoalojados</strong>: cualificación de leads,
-                                cotización y propuestas PDF, y publicación desatendida en Facebook, Instagram, Threads y
-                                Google Business.</li>
-                            <li><strong>TesIA.es</strong> — plataforma EdTech para oposiciones AGE (TAI y Auxiliar) con
-                                tutor socrático RAG sobre temario oficial, generación de simulacros personalizados y
-                                explicaciones automáticas por respuesta. Integra autenticación, pagos recurrentes y base
-                                de conocimiento educativa. Stack: <strong>Next.js, Gemini, Firebase y Stripe</strong>.
+                            <li><strong>Optimización y automatización operativa</strong>: Diseño de flujos en n8n e
+                                integraciones API para cualificación de leads, cotización, generación de PDFs y
+                                publicación automatizada desatendida en redes sociales (LinkedIn, Facebook, Instagram, Threads y Google Business).</li>
+                            <li><strong>TesIA.es</strong>: Plataforma EdTech con tutor legislativo RAG (Gemini) sobre
+                                temario oficial y simulación automática de exámenes. Stack: Next.js, Firebase, Stripe.
                             </li>
-                            <li><strong>D4-Ticket AI</strong> — plataforma de ticketing agéntico con clasificación
-                                automática, búsqueda semántica de incidencias similares, colaboración en tiempo real y
-                                flujos de resolución asistidos por LangGraph. Modela agentes especializados
-                                (clasificador, buscador de conocimiento y redactor de respuesta) sobre pgvector/RAG.
-                                Stack: <strong>Next.js, FastAPI, PostgreSQL, Redis, pgvector y WebSockets</strong>.
-                                Demo:
-                                <a href="https://d4-ticket-ai.vercel.app" target="_blank">d4-ticket-ai.vercel.app</a>
-                            </li>
-                            <li><strong>D4Sim</strong> — simulador de vuelo 2D y tutor IFR virtual (mobile/web) para el
-                                entrenamiento de maniobras aeronáuticas. Integra análisis de telemetría en tiempo real,
-                                lógica matemática de navegación IFR, cálculo DME con corrección de altitud y
-                                clasificación de entradas a esperas. Evalúa maniobras contra SOPs con tutor LLM,
-                                respuestas JSON Schema y fallback heurístico offline. Stack: <strong>React Native
-                                    (Expo), TypeScript, Reanimated, SVG, Node.js y Vercel Serverless</strong>. Demo: <a
-                                    href="https://d4-sim.vercel.app/" target="_blank">d4-sim.vercel.app</a></li>
-                            <li><strong>D4Stream</strong> — sistema de detección predictiva de fallos de hardware basado
-                                en telemetría de series temporales, puntuaciones de anomalía e inferencia con LSTMs.
-                                Incluye buscador documental RAG local para técnicos sobre manuales y esquemas de
-                                mantenimiento, orientado a soporte de infraestructuras críticas. Stack: <strong>PyTorch,
-                                    FastAPI, PostgreSQL/TimescaleDB, FAISS y Ollama</strong>.</li>
+                            <li><strong>D4Sim (Simulador IFR y Tutor Virtual)</strong>: Desarrollado en React Native,
+                                evalúa maniobras de entrenamiento contra SOPs e instruccionales mediante un tutor
+                                virtual basado en la IA Gemini.</li>
+                            <li><strong>Análisis de datos y analítica de rendimiento</strong>: Desarrollo de scripts en Python e integraciones con bases de datos para el cálculo automático y visualización de indicadores operativos (KPIs) de disponibilidad, ocupación y uso de recursos.</li>
+                            <li><strong>Administración de infraestructuras críticas autoalojadas</strong> (bases de
+                                datos PostgreSQL, colas en Redis, Docker) garantizando máxima disponibilidad y
+                                resolución de incidencias de software.</li>
                         </ul>
                     </div>
 
+                    <!-- Ionics / Veolia -->
                     <div class="entry">
                         <div class="entry-header">
-                            <span class="entry-title">Especialista en Sistemas y Datos Críticos</span>
+                            <span class="entry-title">Especialista en Sistemas, Operaciones y Datos Críticos</span>
                             <span class="entry-date">2007 - 2024</span>
                         </div>
                         <div class="entry-sub">Ionics Ibérica SLU (Veolia Water Technologies)</div>
                         <ul class="entry-list">
-                            <li>Supervisión de infraestructuras críticas de desalación con foco en continuidad
-                                operativa, seguridad y tolerancia mínima al error bajo procedimientos estrictos (SOPs).
-                            </li>
-                            <li>Operación <strong>SCADA</strong> y resolución de fallos en <strong>PLC (Allen
-                                    Bradley)</strong>; análisis de datos operativos y soporte de redes y hardware
-                                industrial.</li>
+                            <li><strong>Monitorización y continuidad operativa</strong> en plantas críticas de
+                                tratamiento. Aplicación rigurosa de procedimientos SOPs con tolerancia cero al fallo de
+                                operación.</li>
+                            <li><strong>Administración y resolución de incidencias en tiempo real</strong> en hardware
+                                industrial, redes locales TCP/IP y sistemas de control e instrumentación SCADA/PLCs
+                                (Allen Bradley).</li>
+                            <li><strong>Análisis y exportación de datos de procesos</strong> para la elaboración de reportes de fiabilidad e indicadores de disponibilidad y rendimiento operativo.</li>
                         </ul>
                     </div>
                 </div>
@@ -496,42 +444,44 @@
             <section class="section">
                 <h2 class="section-title">Formación</h2>
                 <div class="job-education-block">
+                    <!-- CIFP CESAR MANRIQUE -->
                     <div class="entry">
                         <div class="entry-header">
-                            <span class="entry-title">Grado Superior en Desarrollo de Aplicaciones Web</span>
+                            <span class="entry-title">Grado Superior en Desarrollo de Aplicaciones Web (DAW)</span>
                             <span class="entry-date">2024 - 2026</span>
                         </div>
                         <div class="entry-sub">CIFP César Manrique</div>
                         <ul class="entry-list">
-                            <li>Nota Media global de <strong>Sobresaliente</strong>.</li>
-                            <li><strong>Mención Honorífica</strong> en Programación (Java) y Lenguajes de Marcas.</li>
+                            <li>Nota Media Global de <strong>Sobresaliente</strong> con Mención Honorífica en
+                                Programación y Lenguajes de Marcas.</li>
                         </ul>
                     </div>
 
+                    <!-- UNED -->
                     <div class="entry">
                         <div class="entry-header">
-                            <span class="entry-title">Grado en Ingeniería Informática</span>
-                            <span class="entry-date">186 ECTS</span>
+                            <span class="entry-title">Grado en Ingeniería Informática (186 ECTS aprobados)</span>
+                            <span class="entry-date">UNED</span>
                         </div>
-                        <div class="entry-sub">UNED</div>
+                        <div class="entry-sub">Especialización en Sistemas Operativos, Distribuidos e IT</div>
                         <ul class="entry-list">
-                            <li><strong>Matrícula de Honor</strong> en Fundamentos de Programación y
-                                <strong>Sobresaliente</strong> en Estrategias de Programación y Estructuras de Datos.
-                            </li>
-                            <li>Sólida formación en <strong>Sistemas Distribuidos, Seguridad y Gestión de
-                                    Empresas</strong> con base profunda en algoritmia y lógica aplicada.</li>
+                            <li><strong>Matrícula de Honor:</strong> Fundamentos de programación.</li>
+                            <li><strong>Sobresaliente:</strong> Estrategias de programación y estructuras de datos,
+                                Ingeniería de computadores III y Gestión de empresas informáticas.</li>
                         </ul>
                     </div>
 
+                    <!-- CANAVIA / BLUETEAM -->
                     <div class="entry">
                         <div class="entry-header">
-                            <span class="entry-title">Formación de Aviación Comercial (ATPL/CPL/IR/MEP)</span>
+                            <span class="entry-title">Piloto de Transporte de Línea Aérea (ATPL/CPL/IR/MEP)</span>
                             <span class="entry-date">En curso</span>
                         </div>
-                        <div class="entry-sub">CANAVIA / BlueTeam Flight School</div>
+                        <div class="entry-sub">BlueTeam Flight School / CANAVIA</div>
                         <ul class="entry-list">
-                            <li>Crew Resource Management (CRM), toma de decisiones bajo presión y procedimientos
-                                estandarizados en entornos de alta exigencia.</li>
+                            <li>Formación teórica y práctica en planificación de vuelos, meteorología, navegación,
+                                performance y normativas EASA. Enfoque y entrenamiento específico en CRM y toma de
+                                decisiones estructuradas.</li>
                         </ul>
                     </div>
                 </div>
