@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Presentación - Eudaldo Cal Saul</title>
+    <style>
+        :root {
+            --primary-dark: #0f172a;
+            --accent-blue: #0252c9;
+            --bg-sidebar: #f8fafc;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-main);
+            line-height: 1.5;
+            background: #f1f5f9;
+            padding: 10px;
+        }
+
+        .cv-container {
+            width: 210mm;
+            height: 297mm;
+            max-height: 297mm;
+            background: white;
+            margin: 0 auto;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 28%;
+            background: var(--bg-sidebar);
+            padding: 55px 18px 15px 18px;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .sidebar-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-title {
+            color: var(--primary-dark);
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 3px;
+            width: 100%;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .contact-item {
+            font-size: 0.75rem;
+            color: var(--text-main);
+            word-break: break-all;
+        }
+
+        .contact-item strong {
+            color: var(--primary-dark);
+        }
+
+        .contact-item a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            padding: 55px 40px 30px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            color: var(--primary-dark);
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+
+        .header-subtitle {
+            font-size: 0.82rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .letter-content {
+            font-size: 0.85rem;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            text-align: justify;
+        }
+
+        .bullet-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 6px 0;
+        }
+
+        .bullet-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .bullet-item::before {
+            content: "‣";
+            position: absolute;
+            left: 0;
+            top: -2px;
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+        }
+
+        .bullet-title {
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .signature {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            font-size: 0.85rem;
+        }
+
+        .signature-name {
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .signature-link a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .signature-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+                width: 210mm;
+                height: 297mm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cv-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- CONTACTO -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Contacto</h3>
+                <div class="contact-list">
+                    <div class="contact-item"><strong>Ubicación:</strong> Tenerife, España</div>
+                    <div class="contact-item"><strong>Email:</strong> <a
+                            href="mailto:eudaldocal@gmail.com">eudaldocal@gmail.com</a></div>
+                    <div class="contact-item"><strong>Teléfono:</strong> <a href="tel:+34666750753">+34 666 750 753</a>
+                    </div>
+                    <div class="contact-item"><strong>LinkedIn:</strong><br><a
+                            href="https://linkedin.com/in/eudaldo-alvaro-c-b37aa731"
+                            target="_blank">linkedin.com/in/eudaldo-alvaro-c-b37aa731</a></div>
+                    <div class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/ececs"
+                            target="_blank">github.com/ececs</a></div>
+                    <div class="contact-item"><strong>Web:</strong> <a href="https://d4lab.es"
+                            target="_blank">d4lab.es</a></div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <header>
+                <h1>Eudaldo Cal Saul</h1>
+                <div class="header-subtitle">Carta de Presentación · Técnico de Operaciones ATO</div>
+            </header>
+
+            <div class="letter-content">
+                <p>Estimado/a Responsable de Selección,</p>
+
+                <p>Le escribo con entusiasmo para presentar mi candidatura al puesto de Técnico/a de Operaciones en Blue Team Flight School. Como alumno piloto que actualmente cursa su formación de aviación comercial en su escuela, conozco de primera mano el nivel de excelencia operativa, coordinación e implicación diaria que requiere el correcto funcionamiento de una ATO.</p>
+
+                <p>Mi trayectoria profesional se compone de un perfil híbrido que encaja de forma directa con los retos diarios de este puesto:</p>
+
+                <div class="bullet-section">
+                    <div class="bullet-item">
+                        <span class="bullet-title">17 años de experiencia en entornos industriales críticos (Ionics / Veolia):</span>
+                        <span>He trabajado bajo una estricta filosofía de tolerancia cero al error, aplicando procedimientos operativos normalizados (SOPs) y resolviendo incidencias en tiempo real. Esta mentalidad es homóloga a la disciplina, la cultura de seguridad y la gestión de recursos (CRM) que requiere la aviación.</span>
+                    </div>
+                    <div class="bullet-item">
+                        <span class="bullet-title">Capacidad técnica, análisis y automatización:</span>
+                        <span>Cuento con formación avanzada en Ingeniería Informática (UNED) y Desarrollo de Aplicaciones Web. Domino el análisis de datos mediante Python y bases de datos SQL, lo que me permite estructurar e implementar de manera automatizada informes y KPIs sobre la disponibilidad, ocupación y optimización de recursos y aeronaves.</span>
+                    </div>
+                    <div class="bullet-item">
+                        <span class="bullet-title">Sintonía y conocimiento del entorno ATO:</span>
+                        <span>Entiendo la complejidad diaria que supone planificar vuelos e instructores, coordinar con el departamento de mantenimiento (AOG) y cumplir con las normativas aeronáuticas y de fatiga. Al estar realizando mi formación ATPL/CPL en la propia escuela, mi integración y aliciente con sus objetivos operativos e internos sería inmediata y fluida.</span>
+                    </div>
+                </div>
+
+                <p>Me considero una persona resolutiva, con pensamiento analítico estructurado y con la capacidad de absorber un elevado volumen de trabajo manteniendo la precisión y la atención al detalle que el sector aeronáutico demanda.</p>
+
+                <p>Sería un verdadero honor aportar mi experiencia en sistemas, datos y operaciones para optimizar la actividad diaria de la escuela en la que he confiado para formarme como piloto. Agradezco de antemano su tiempo y consideración, y quedo a su entera disposición para mantener una entrevista y conversar sobre cómo puedo sumar valor a su equipo.</p>
+
+                <div class="signature">
+                    <span>Atentamente,</span>
+                    <span class="signature-name">Eudaldo Cal Saul</span>
+                    <span class="signature-link"><a href="https://linkedin.com/in/eudaldo-alvaro-c-b37aa731" target="_blank">linkedin.com/in/eudaldo-alvaro-c-b37aa731</a></span>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
