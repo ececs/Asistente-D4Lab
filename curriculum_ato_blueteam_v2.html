@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Eudaldo Cal Saul - Técnico de Operaciones ATO</title>
+    <style>
+        :root {
+            --primary-dark: #0f172a;
+            --accent-blue: #0252c9;
+            --bg-sidebar: #f8fafc;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-main);
+            line-height: 1.4;
+            background: #f1f5f9;
+            padding: 10px;
+        }
+
+        .cv-container {
+            width: 210mm;
+            height: 297mm;
+            max-height: 297mm;
+            background: white;
+            margin: 0 auto;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 28%;
+            background: var(--bg-sidebar);
+            padding: 55px 18px 15px 18px;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-title {
+            color: var(--primary-dark);
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 3px;
+            width: 100%;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .contact-item {
+            font-size: 0.75rem;
+            color: var(--text-main);
+            word-break: break-all;
+        }
+
+        .contact-item strong {
+            color: var(--primary-dark);
+        }
+
+        .contact-item a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        /* Stack Tecnico styling */
+        .stack-group {
+            margin-bottom: 8px;
+        }
+
+        .stack-group-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .skill-tag {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.68rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        /* Diferencial section */
+        .differential-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .differential-item {
+            font-size: 0.72rem;
+            position: relative;
+            padding-left: 14px;
+            color: var(--text-main);
+            line-height: 1.35;
+        }
+
+        .differential-item::before {
+            content: "‣";
+            position: absolute;
+            left: 0;
+            top: -1px;
+            color: var(--accent-blue);
+            font-size: 0.95rem;
+        }
+
+        /* Idiomas */
+        .lang-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .lang-item {
+            font-size: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .lang-item strong {
+            color: var(--primary-dark);
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            padding: 24px 30px 18px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            color: var(--primary-dark);
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+
+        .header-subtitle {
+            font-size: 0.82rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .profile-summary {
+            background: #f0f7ff;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 4px solid var(--accent-blue);
+            font-size: 0.78rem;
+            line-height: 1.4;
+            color: var(--text-main);
+        }
+
+        .section-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 3px;
+            letter-spacing: 0.05em;
+        }
+
+        .job-education-block {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .entry {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .entry-title {
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--primary-dark);
+        }
+
+        .entry-date {
+            font-size: 0.72rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .entry-sub {
+            font-weight: 700;
+            color: var(--accent-blue);
+            font-size: 0.82rem;
+            text-decoration: none;
+        }
+
+        .entry-sub a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .entry-sub a:hover {
+            text-decoration: underline;
+        }
+
+        .entry-list {
+            list-style-type: disc;
+            padding-left: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-top: 1px;
+        }
+
+        .entry-list li {
+            font-size: 0.75rem;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .entry-list li strong {
+            color: var(--primary-dark);
+        }
+
+        .entry-list li a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .entry-list li a:hover {
+            text-decoration: underline;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+                width: 210mm;
+                height: 297mm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cv-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- CONTACTO -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Contacto</h3>
+                <div class="contact-list">
+                    <div class="contact-item"><strong>Ubicación:</strong> Tenerife, España</div>
+                    <div class="contact-item"><strong>Email:</strong> <a
+                            href="mailto:eudaldocal@gmail.com">eudaldocal@gmail.com</a></div>
+                    <div class="contact-item"><strong>Teléfono:</strong> <a href="tel:+34666750753">+34 666 750 753</a>
+                    </div>
+                    <div class="contact-item"><strong>LinkedIn:</strong><br><a
+                            href="https://linkedin.com/in/eudaldo-alvaro-c-b37aa731"
+                            target="_blank">linkedin.com/in/eudaldo-alvaro-c-b37aa731</a></div>
+                    <div class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/ececs"
+                            target="_blank">github.com/ececs</a></div>
+                    <div class="contact-item"><strong>Web:</strong> <a href="https://d4lab.es"
+                            target="_blank">d4lab.es</a></div>
+                </div>
+            </div>
+
+            <!-- COMPETENCIAS CLAVE -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Competencias</h3>
+
+                <div class="stack-group">
+                    <div class="stack-group-title">Operaciones e IT</div>
+                    <div class="tags-container">
+                        <span class="skill-tag">Planificación</span>
+                        <span class="skill-tag">SOPs / Normativa</span>
+                        <span class="skill-tag">Gestión de Datos</span>
+                        <span class="skill-tag">Excel Avanzado</span>
+                        <span class="skill-tag">IT Service Mgt</span>
+                        <span class="skill-tag">Sistemas / Redes</span>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <div class="stack-group-title">Desarrollo e IA</div>
+                    <div class="tags-container">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">BBDD / SQL</span>
+                        <span class="skill-tag">HTML / CSS</span>
+                        <span class="skill-tag">n8n / APIs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIFERENCIAL -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Diferencial</h3>
+                <ul class="differential-list">
+                    <li class="differential-item">Alumno ATPL/CPL en curso (CANAVIA / BlueTeam)</li>
+                    <li class="differential-item">17 años en sistemas industriales críticos (tolerancia cero)</li>
+                    <li class="differential-item">Pensamiento estructurado y CRM aplicado a operaciones</li>
+                    <li class="differential-item">186 ECTS en Ingeniería Informática (UNED)</li>
+                </ul>
+            </div>
+
+            <!-- IDIOMAS -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Idiomas</h3>
+                <div class="lang-list">
+                    <div class="lang-item"><strong>Español:</strong> Nativo</div>
+                    <div class="lang-item"><strong>Inglés:</strong> B2 certificado</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <header>
+                <h1>Eudaldo Cal Saul</h1>
+                <div class="header-subtitle">ESPECIALISTA EN OPERACIONES e IT</div>
+            </header>
+
+            <div class="profile-summary">
+                Perfil híbrido que combina <strong>17 años de experiencia operando sistemas industriales
+                    críticos</strong> con formación sólida en <strong>Ingeniería Informática y desarrollo de
+                    software</strong>. Alumno piloto ATPL en curso con profundo entendimiento de la cultura de
+                seguridad, CRM y procedimientos de una ATO. Aporto habilidades en administración de sistemas, análisis
+                de datos y automatización de flujos de trabajo para optimizar la planificación de vuelos, disponibilidad
+                de recursos y resolución de incidencias.
+            </div>
+
+            <!-- EXPERIENCIA -->
+            <section class="section">
+                <h2 class="section-title">Experiencia</h2>
+                <div class="job-education-block">
+                    <!-- D4Lab -->
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Founder · Consultor IT y Analista de Datos</span>
+                            <span class="entry-date">2024 - Actualidad</span>
+                        </div>
+                        <div class="entry-sub"><a href="https://d4lab.es" target="_blank">D4Lab · Estudio de Software &
+                                Automatización</a></div>
+                        <ul class="entry-list">
+                            <li><strong>Optimización y automatización operativa</strong>: Diseño de flujos en n8n e
+                                integraciones API para cualificación de leads, cotización, generación de PDFs y
+                                publicación automatizada desatendida en redes sociales (LinkedIn, Facebook, Instagram, Threads y Google Business).</li>
+                            <li><strong>TesIA.es</strong>: Plataforma EdTech con tutor legislativo RAG (Gemini) sobre
+                                temario oficial y simulación automática de exámenes. Stack: Next.js, Firebase, Stripe.
+                            </li>
+                            <li><strong>D4Sim (Simulador IFR y Tutor Virtual)</strong>: Desarrollado en React Native,
+                                evalúa maniobras de entrenamiento contra SOPs e instruccionales mediante un tutor
+                                virtual basado en la IA Gemini.</li>
+                            <li><strong>Análisis de datos y analítica de rendimiento</strong>: Desarrollo de scripts en Python e integraciones con bases de datos para el cálculo automático y visualización de indicadores operativos (KPIs) de disponibilidad, ocupación y uso de recursos.</li>
+                            <li><strong>Administración de infraestructuras críticas autoalojadas</strong> (bases de
+                                datos PostgreSQL, colas en Redis, Docker) garantizando máxima disponibilidad y
+                                resolución de incidencias de software.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Ionics / Veolia -->
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Especialista en Sistemas, Operaciones y Datos Críticos</span>
+                            <span class="entry-date">2007 - 2024</span>
+                        </div>
+                        <div class="entry-sub">Ionics Ibérica SLU (Veolia Water Technologies)</div>
+                        <ul class="entry-list">
+                            <li><strong>Monitorización y continuidad operativa</strong> en plantas críticas de
+                                tratamiento. Aplicación rigurosa de procedimientos SOPs con tolerancia cero al fallo de
+                                operación.</li>
+                            <li><strong>Administración y resolución de incidencias en tiempo real</strong> en hardware
+                                industrial, redes locales TCP/IP y sistemas de control e instrumentación SCADA/PLCs
+                                (Allen Bradley).</li>
+                            <li>Análisis y exportación de datos de procesos para la elaboración de reportes de
+                                fiabilidad e indicadores de disponibilidad y rendimiento operativo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FORMACIÓN -->
+            <section class="section">
+                <h2 class="section-title">Formación</h2>
+                <div class="job-education-block">
+                    <!-- CIFP CESAR MANRIQUE -->
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Grado Superior en Desarrollo de Aplicaciones Web (DAW)</span>
+                            <span class="entry-date">2024 - 2026</span>
+                        </div>
+                        <div class="entry-sub">CIFP César Manrique</div>
+                        <ul class="entry-list">
+                            <li>Nota Media Global de <strong>Sobresaliente</strong> con Mención Honorífica en
+                                Programación y Lenguajes de Marcas.</li>
+                        </ul>
+                    </div>
+
+                    <!-- UNED -->
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Grado en Ingeniería Informática (186 ECTS aprobados)</span>
+                            <span class="entry-date">UNED</span>
+                        </div>
+                        <div class="entry-sub">Especialización en Sistemas Operativos, Distribuidos e IT</div>
+                        <ul class="entry-list">
+                            <li><strong>Matrícula de Honor:</strong> Fundamentos de programación.</li>
+                            <li><strong>Sobresaliente:</strong> Estrategias de programación y estructuras de datos,
+                                Ingeniería de computadores III y Gestión de empresas informáticas.</li>
+                        </ul>
+                    </div>
+
+                    <!-- CANAVIA / BLUETEAM -->
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Piloto de Transporte de Línea Aérea (ATPL/CPL/IR/MEP)</span>
+                            <span class="entry-date">En curso</span>
+                        </div>
+                        <div class="entry-sub">BlueTeam Flight School / CANAVIA</div>
+                        <ul class="entry-list">
+                            <li>Formación teórica y práctica en planificación de vuelos, meteorología, navegación,
+                                performance y normativas EASA. Enfoque y entrenamiento específico en CRM y toma de
+                                decisiones estructuradas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

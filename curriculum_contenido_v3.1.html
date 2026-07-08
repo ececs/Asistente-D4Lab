@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Eudaldo Cal Saul</title>
+    <style>
+        :root {
+            --primary-dark: #0f172a;
+            --accent-blue: #0252c9;
+            --bg-sidebar: #f8fafc;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-main);
+            line-height: 1.4;
+            background: #f1f5f9;
+            padding: 10px;
+        }
+
+        .cv-container {
+            width: 210mm;
+            height: 297mm;
+            max-height: 297mm;
+            background: white;
+            margin: 0 auto;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 29%;
+            background: var(--bg-sidebar);
+            padding: 55px 18px 15px 18px;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-title {
+            color: var(--primary-dark);
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 3px;
+            width: 100%;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .contact-item {
+            font-size: 0.75rem;
+            color: var(--text-main);
+            word-break: break-all;
+        }
+
+        .contact-item strong {
+            color: var(--primary-dark);
+        }
+
+        .contact-item a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        /* Stack Tecnico styling */
+        .stack-group {
+            margin-bottom: 8px;
+        }
+
+        .stack-group-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .skill-tag {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.68rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        /* Diferencial section */
+        .differential-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .differential-item {
+            font-size: 0.72rem;
+            position: relative;
+            padding-left: 14px;
+            color: var(--text-main);
+            line-height: 1.35;
+        }
+
+        .differential-item::before {
+            content: "‣";
+            position: absolute;
+            left: 0;
+            top: -1px;
+            color: var(--accent-blue);
+            font-size: 0.95rem;
+        }
+
+        /* Idiomas */
+        .lang-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .lang-item {
+            font-size: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .lang-item strong {
+            color: var(--primary-dark);
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            padding: 25px 30px 20px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            color: var(--primary-dark);
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+
+        .header-subtitle {
+            font-size: 0.82rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .profile-summary {
+            background: #f0f7ff;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 4px solid var(--accent-blue);
+            font-size: 0.78rem;
+            line-height: 1.4;
+            color: var(--text-main);
+        }
+
+        .section-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 3px;
+            letter-spacing: 0.05em;
+        }
+
+        .job-education-block {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .entry {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .entry-title {
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--primary-dark);
+        }
+
+        .entry-date {
+            font-size: 0.72rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .entry-sub {
+            font-weight: 700;
+            color: var(--accent-blue);
+            font-size: 0.82rem;
+            text-decoration: none;
+        }
+
+        .entry-sub a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .entry-sub a:hover {
+            text-decoration: underline;
+        }
+
+        .entry-list {
+            list-style-type: disc;
+            padding-left: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-top: 1px;
+        }
+
+        .entry-list li {
+            font-size: 0.75rem;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .entry-list li strong {
+            color: var(--primary-dark);
+        }
+
+        .entry-list li a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .entry-list li a:hover {
+            text-decoration: underline;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+                width: 210mm;
+                height: 297mm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cv-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- CONTACTO -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Contacto</h3>
+                <div class="contact-list">
+                    <div class="contact-item"><strong>Ubicación:</strong> Tenerife, España</div>
+                    <div class="contact-item"><strong>Email:</strong> <a
+                            href="mailto:eudaldocal@gmail.com">eudaldocal@gmail.com</a></div>
+                    <div class="contact-item"><strong>Teléfono:</strong> <a href="tel:+34666750753">+34 666 750 753</a>
+                    </div>
+                    <div class="contact-item"><strong>LinkedIn:</strong><br><a
+                            href="https://linkedin.com/in/eudaldo-alvaro-c-b37aa731"
+                            target="_blank">linkedin.com/in/eudaldo-alvaro-c-b37aa731</a></div>
+                    <div class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/ececs"
+                            target="_blank">github.com/ececs</a></div>
+                    <div class="contact-item"><strong>Web:</strong> <a href="https://d4lab.es"
+                            target="_blank">d4lab.es</a></div>
+                </div>
+            </div>
+
+            <!-- STACK TÉCNICO -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Stack Técnico</h3>
+
+                <div class="stack-group">
+                    <div class="stack-group-title">Lenguajes</div>
+                    <div class="tags-container">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <div class="stack-group-title">IA & ML</div>
+                    <div class="tags-container">
+                        <span class="skill-tag">LangGraph</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">pgvector</span>
+                        <span class="skill-tag">FAISS</span>
+                        <span class="skill-tag">Ollama</span>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <div class="stack-group-title">Backend & Datos</div>
+                    <div class="tags-container">
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">WebSockets</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <div class="stack-group-title">Frontend</div>
+                    <div class="tags-container">
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">Expo</span>
+                        <span class="skill-tag">Tailwind</span>
+                    </div>
+                </div>
+
+                <div class="stack-group">
+                    <div class="stack-group-title">Automatización & DevOps</div>
+                    <div class="tags-container">
+                        <span class="skill-tag">n8n</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Stripe</span>
+                        <span class="skill-tag">Vercel</span>
+                        <span class="skill-tag">Railway</span>
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">Pytest</span>
+                        <span class="skill-tag">Playwright</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIFERENCIAL -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Diferencial</h3>
+                <ul class="differential-list">
+                    <li class="differential-item">17 años en sistemas industriales críticos (tolerancia cero al error)
+                    </li>
+                    <li class="differential-item">Nota media de Sobresaliente en DAW · Mención de Honor</li>
+                    <li class="differential-item">186 ECTS en Ingeniería Informática (UNED)</li>
+                    <li class="differential-item">Formación ATPL/CPL en curso (disciplina operativa y CRM)</li>
+                </ul>
+            </div>
+
+            <!-- IDIOMAS -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Idiomas</h3>
+                <div class="lang-list">
+                    <div class="lang-item"><strong>Español:</strong> Nativo</div>
+                    <div class="lang-item"><strong>Inglés:</strong> B2 certificado</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <header>
+                <h1>Eudaldo Cal Saul</h1>
+                <div class="header-subtitle">DESARROLLADOR FULL-STACK · IA APLICADA Y AUTOMATIZACIÓN</div>
+            </header>
+
+            <div class="profile-summary">
+                Desarrollador full-stack especializado en <strong>IA aplicada, automatización y sistemas RAG</strong>,
+                con <strong>17 años de experiencia previa operando sistemas industriales críticos</strong>. Diseño y
+                pongo en producción soluciones completas: backend, frontend, flujos n8n, asistentes LLM y productos con
+                pagos, datos y despliegue cloud, combinando criterio técnico con disciplina operativa de "error cero".
+            </div>
+
+            <!-- EXPERIENCIA -->
+            <section class="section">
+                <h2 class="section-title">Experiencia</h2>
+                <div class="job-education-block">
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Founder · Full-Stack & AI Automation Engineer</span>
+                            <span class="entry-date">2024 - Actualidad</span>
+                        </div>
+                        <div class="entry-sub"><a href="https://d4lab.es" target="_blank">D4Lab · Estudio de IA &
+                                Software</a></div>
+                        <ul class="entry-list">
+                            <li><strong>Diseño soluciones de automatización e IA</strong> para operaciones, soporte y
+                                captación, con <strong>workflows n8n autoalojados</strong>: cualificación de leads,
+                                cotización y propuestas PDF, y publicación desatendida en Facebook, Instagram, Threads y
+                                Google Business.</li>
+                            <li><strong>TesIA.es</strong> — plataforma EdTech para oposiciones AGE (TAI y Auxiliar) con
+                                tutor socrático RAG sobre temario oficial, generación de simulacros personalizados y
+                                explicaciones automáticas por respuesta. Integra autenticación, pagos recurrentes y base
+                                de conocimiento educativa. Stack: <strong>Next.js, Gemini, Firebase y Stripe</strong>.
+                            </li>
+                            <li><strong>D4-Ticket AI</strong> — plataforma de ticketing agéntico en tiempo real. Modela
+                                agentes colaborativos (clasificador, buscador y redactor) mediante LangGraph sobre
+                                pgvector y RAG para resolución automática. Stack: <strong>Next.js, FastAPI, PostgreSQL,
+                                    Redis, pgvector y WebSockets</strong>. Demo: <a
+                                    href="https://d4-ticket-ai.vercel.app" target="_blank">d4-ticket-ai.vercel.app</a>
+                            </li>
+                            <li><strong>D4Sim</strong> — simulador 2D y tutor IFR virtual. Integra análisis de
+                                telemetría, lógica de navegación IFR (cálculo DME y clasificación de esperas) y
+                                evaluación de maniobras contra SOPs mediante tutor LLM (JSON Schema Mode) y heurísticas
+                                locales offline. Stack: <strong>React Native (Expo), Reanimated, SVG, Node.js y
+                                    Vercel</strong>. Demo: <a href="https://d4-sim.vercel.app/"
+                                    target="_blank">d4-sim.vercel.app</a></li>
+                            <li><strong>D4Stream</strong> — detección predictiva de fallos de hardware mediante
+                                telemetría de series temporales (LSTMs) e inferencia de anomalías. Incluye buscador RAG
+                                local con FAISS y Ollama para consulta de manuales y esquemas de mantenimiento crítico.
+                                Stack: <strong>PyTorch, FastAPI, TimescaleDB, FAISS y Ollama</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Especialista en Sistemas y Datos Críticos</span>
+                            <span class="entry-date">2007 - 2024</span>
+                        </div>
+                        <div class="entry-sub">Ionics Ibérica SLU (Veolia Water Technologies)</div>
+                        <ul class="entry-list">
+                            <li>Supervisión de instalaciones críticas enfocada en continuidad operativa, seguridad y
+                                tolerancia mínima al error (SOPs).</li>
+                            <li>Operación <strong>SCADA</strong> y resolución de fallos en <strong>PLC (Allen
+                                    Bradley)</strong>; análisis de datos operativos y soporte de redes y hardware
+                                industrial.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FORMACIÓN -->
+            <section class="section">
+                <h2 class="section-title">Formación</h2>
+                <div class="job-education-block">
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Grado Superior en Desarrollo de Aplicaciones Web</span>
+                            <span class="entry-date">2024 - 2026</span>
+                        </div>
+                        <div class="entry-sub">CIFP César Manrique</div>
+                        <ul class="entry-list">
+                            <li>Nota Media global de <strong>Sobresaliente</strong>.</li>
+                            <li><strong>Mención Honorífica</strong> en Programación (Java) y Lenguajes de Marcas.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Grado en Ingeniería Informática</span>
+                            <span class="entry-date">186 ECTS</span>
+                        </div>
+                        <div class="entry-sub">UNED</div>
+                        <ul class="entry-list">
+                            <li><strong>Matrícula de Honor</strong> en Fundamentos de Programación y
+                                <strong>Sobresaliente</strong> en Estrategias de Programación y Estructuras de Datos.
+                            </li>
+                            <li>Sólida formación en <strong>Sistemas Distribuidos, Seguridad y Gestión de
+                                    Empresas</strong> con amplia base en algoritmia.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Formación de Aviación Comercial (ATPL/CPL/IR/MEP)</span>
+                            <span class="entry-date">En curso</span>
+                        </div>
+                        <div class="entry-sub">CANAVIA / BlueTeam Flight School</div>
+                        <ul class="entry-list">
+                            <li>Crew Resource Management (CRM), toma de decisiones bajo presión y procedimientos
+                                estandarizados en entornos de alta exigencia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
